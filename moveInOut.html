@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: transparent;
+        background-color: #222;
+        padding: 20px 40px;
+        border: 3px solid #222;
+        font-size: 32px;
+        font-family: system-ui;
+        position: relative;
+        overflow: hidden;
+      }
+
+      a::before {
+        content: 'hover me';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #222;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        transition: all 0.3s;
+      }
+
+      a::after {
+        content: 'hover me';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #222;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        transform: translate(-100%, 100%);
+        transition: all 0.3s;
+      }
+
+      a:hover::before {
+        transform: translate(100%, -100%);
+      }
+
+      a:hover::after {
+        transform: translate(0, 0);
+      }
+    </style>
+    <title>Move in and out on hover</title>
+  </head>
+  <body>
+    <a href="#">hover me</a>
+  </body>
+</html>

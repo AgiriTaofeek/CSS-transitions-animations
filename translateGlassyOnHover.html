@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #111;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #ddd;
+        padding: 20px 40px;
+        border: 3px solid #ddd;
+        font-size: 32px;
+        font-family: system-ui;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s;
+      }
+
+      a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+        height: 20%;
+        width: 100%;
+        transform: translateX(-100%) translateY(150%) rotate(45deg);
+        transition: all 0.3s;
+      }
+
+      a:hover::before {
+        transform: translateX(100%) translateY(150%) rotate(45deg);
+      }
+
+      a:hover {
+        background-color: red;
+      }
+    </style>
+    <title>Translate Glassy effect on hover</title>
+  </head>
+  <body>
+    <a href="#">hover me</a>
+  </body>
+</html>

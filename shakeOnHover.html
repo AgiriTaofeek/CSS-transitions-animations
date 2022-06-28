@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #222;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #fff;
+        font-size: 32px;
+        font-family: system-ui;
+        border: 2px solid #fff;
+        padding: 10px 20px;
+        transition: all 0.3s;
+      }
+      a:hover,
+      a:active {
+        color: orangered;
+        border-color: orangered;
+        animation: shake 0.3s linear;
+      }
+
+      @keyframes shake {
+        33% {
+          transform: rotate(10deg);
+        }
+
+        66% {
+          transform: rotate(-10deg);
+        }
+        100% {
+          transform: rotate(10deg);
+        }
+      }
+    </style>
+    <title>animation effect 5</title>
+  </head>
+  <body>
+    <a href="#">hover me</a>
+  </body>
+</html>

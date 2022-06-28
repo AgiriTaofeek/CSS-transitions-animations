@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      figure {
+        margin: 0;
+        width: 400px;
+        height: 400px;
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s;
+        object-fit: cover;
+      }
+
+      figure::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0 0 0/0.7);
+        transform: translateY(100%);
+        transition: all 0.5s;
+        transition-delay: 0.4s;
+      }
+
+      figure:hover::after {
+        transform: translateY(0);
+        transition-delay: 0s;
+      }
+
+      figcaption {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        color: #fff;
+        transform: translateY(-10%);
+        opacity: 0;
+        transition: all 0.5s;
+        transition-delay: 0.2s;
+      }
+
+      h1,
+      p {
+        margin: 0;
+        font-family: system-ui;
+      }
+
+      figure:hover figcaption {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    </style>
+    <title>hover effect 17</title>
+  </head>
+  <body>
+    <figure>
+      <img src="images/sample.jpg" alt="someone on his laptop" />
+      <figcaption>
+        <h1>My image caption</h1>
+        <p>This is just a blank text that serves as a figcaption</p>
+      </figcaption>
+    </figure>
+  </body>
+</html>

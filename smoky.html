@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+      }
+
+      ul {
+        font-family: system-ui;
+        display: flex;
+        list-style: none;
+        letter-spacing: 10px;
+        font-size: 70px;
+        color: #fff;
+        font-weight: bold;
+      }
+      li {
+        transition: all 1s;
+      }
+
+      ul:hover li {
+        transform: rotate(45deg) translateY(-200px);
+        opacity: 0;
+        filter: blur(20px);
+      }
+
+      li:nth-child(2){
+        transition-delay: .2s;
+      }
+
+      li:nth-child(3){
+        transition-delay: .4s;
+      }
+
+      li:nth-child(4){
+        transition-delay: .6s;
+      }
+
+      li:nth-child(5){
+        transition-delay: .8s;
+      }
+    </style>
+    <title>hover effect 18</title>
+  </head>
+  <body>
+    <ul>
+      <li>S</li>
+      <li>M</li>
+      <li>O</li>
+      <li>K</li>
+      <li>Y</li>
+    </ul>
+  </body>
+</html>

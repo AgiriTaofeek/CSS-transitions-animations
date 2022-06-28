@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url(images/bg-2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+
+      .rain {
+        background: url(images/rain.png);
+        height: 100%;
+        animation: rain .2s infinite;
+      }
+
+      @keyframes rain {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 20% 100%;
+        }
+      }
+    </style>
+    <title>animation effect 12</title>
+  </head>
+  <body>
+    <div class="rain"></div>
+  </body>
+</html>

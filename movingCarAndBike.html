@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+
+      .container {
+        background-image: url(images/bg.jpg);
+        height: 100vh;
+        background-position: bottom left;
+        animation: driving 20s linear infinite;
+      }
+
+      .car {
+        position: absolute;
+        width: 200px;
+        left: 300px;
+        bottom: 8px;
+      }
+
+      .bike {
+        position: absolute;
+        width: 150px;
+        left: 700px;
+        bottom: 5px;
+      }
+
+      @keyframes driving {
+        from {
+          background-position: bottom left;
+        }
+
+        to {
+          background-position: bottom right;
+        }
+      }
+    </style>
+    <title>animation for car and motorbike</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/car.png" alt="moving car" class="car" />
+      <img src="images/motobike.png" alt="moving car" class="bike" />
+    </div>
+  </body>
+</html>

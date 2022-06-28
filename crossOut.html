@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #272727;
+        padding: 40px 80px;
+        border: 5px solid #272727;
+        font-size: 32px;
+        font-family: system-ui;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s;
+      }
+
+      a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #272727;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transform: rotateX(90deg);
+        transition: transform 0.3s;
+      }
+
+      a::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #272727;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transform: rotateY(90deg);
+        transition: transform 0.3s;
+      }
+
+      a:hover::before {
+        transform: rotateX(0);
+      }
+
+      a:hover::after {
+        transform: rotateY(0);
+      }
+
+      a:hover {
+        color: white;
+      }
+    </style>
+    <title>Cross out on hover</title>
+  </head>
+  <body>
+    <a href="#">hover me</a>
+  </body>
+</html>

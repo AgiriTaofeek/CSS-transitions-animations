@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #555;
+      }
+      h1 {
+        font-family: system-ui;
+        font-size: 200px;
+        text-align: center;
+        background: url(images/wave.jpg);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: wave 20s infinite alternate;
+      }
+
+      @keyframes wave {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 100% 100%;
+        }
+      }
+    </style>
+    <title>animation effect 10</title>
+  </head>
+  <body>
+    <h1>CSS ANIMATION</h1>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        padding: 5px 10px;
+        display: block;
+        position: relative;
+        text-transform: capitalize;
+        transition: all 0.3s;
+      }
+      a:hover {
+        color: white;
+        background-color: orangered;
+      }
+
+      a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border: 3px solid orangered;
+        border-width: 0 0 3px 3px;
+        transform: translate(12px, -12px);
+        transition: all 0.3s;
+        opacity: 0;
+      }
+
+      a:hover::before {
+        transform: translate(-10px, 10px);
+        opacity: 1;
+      }
+      a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 12px;
+        height: 12px;
+        border: 3px solid orangered;
+        border-width: 3px 3px 0 0;
+        transform: translate(-12px, 12px);
+        transition: all 0.3s;
+        opacity: 0;
+      }
+
+      a:hover::after {
+        transform: translate(10px, -10px);
+        opacity: 1;
+      }
+    </style>
+    <title>hover effect 20</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">away</a></li>
+      <li><a href="#">jersey</a></li>
+      <li><a href="#">role</a></li>
+      <li><a href="#">coach</a></li>
+    </ul>
+  </body>
+</html>

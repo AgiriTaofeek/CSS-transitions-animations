@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #222;
+      }
+
+      .phone {
+        width: 100px;
+        height: 100px;
+        background-color: limegreen;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .phone::before {
+        content: '';
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        position: absolute;
+        border: 1px solid limegreen;
+        border-radius: 50%;
+        animation: call 1.5s infinite;
+      }
+
+      .phone::after {
+        content: '';
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        position: absolute;
+        border: 1px solid limegreen;
+        border-radius: 50%;
+        animation: call 1.5s infinite;
+        animation-delay: 0.4s;
+      }
+
+      @keyframes call {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        100% {
+          transform: scale(1.4);
+          opacity: 0;
+        }
+      }
+    </style>
+    <title>animation effect 15</title>
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="phone"><ion-icon name="call-outline"></ion-icon></div>
+  </body>
+</html>

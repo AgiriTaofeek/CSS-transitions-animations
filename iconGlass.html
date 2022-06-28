@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui;
+        background-color: #ddd;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        padding: 0;
+      }
+
+      ion-icon {
+        font-size: 24px;
+        transition: all 0.3s;
+      }
+
+      a:link,
+      a:visited {
+        position: relative;
+        text-decoration: none;
+        display: block;
+        width: 90px;
+        height: 90px;
+        background-color: #fff;
+        border-radius: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px -5px rgb(0 0 0/0.2);
+        overflow: hidden;
+      }
+
+      a:hover ion-icon {
+        transform: scale(1.5);
+        color: white;
+      }
+
+      a::before {
+        content: "";
+        position: absolute;
+        left: -110%;
+        top: 90%;
+        width: 120%;
+        height: 120%;
+        background-color: blue;
+        transform: rotate(45deg);
+      }
+
+      a:hover::before {
+        animation: animation 0.8s 1 forwards;
+      }
+
+      @keyframes animation {
+        0% {
+          left: -110%;
+          top: 90%;
+        }
+
+        50% {
+          left: 15%;
+          top: -30%;
+        }
+
+        100% {
+          left: -10%;
+          top: -10%;
+        }
+      }
+    </style>
+    <title>Document</title>
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#">
+          &#8203;
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          &#8203;
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          &#8203;
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >&#8203;
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >&#8203;
+          <ion-icon name="logo-snapchat"></ion-icon>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

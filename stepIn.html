@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #222;
+        display: block;
+        padding: 10px 20px;
+        position: relative;
+        transition: color 0.3s;
+      }
+
+      span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #222;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: all 0.3s;
+      }
+      span:nth-child(2) {
+        left: 25%;
+        transition-delay: 0.1s;
+      }
+      span:nth-child(3) {
+        left: 50%;
+        transition-delay: 0.2s;
+      }
+      span:nth-child(4) {
+        left: 75%;
+        transition-delay: 0.3s;
+      }
+
+      a:hover span {
+        transform: scaleY(1);
+      }
+
+      a:hover {
+        color: #fff;
+      }
+    </style>
+    <title>hover effect 9</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#">Home<span></span><span></span><span></span><span></span></a>
+      </li>
+      <li>
+        <a href="#"
+          >contact<span></span><span></span><span></span><span></span
+        ></a>
+      </li>
+      <li>
+        <a href="#"
+          >feature<span></span><span></span><span></span><span></span
+        ></a>
+      </li>
+      <li>
+        <a href="#"
+          >pricing<span></span><span></span><span></span><span></span
+        ></a>
+      </li>
+    </ul>
+  </body>
+</html>
